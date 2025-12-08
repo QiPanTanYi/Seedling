@@ -42,4 +42,4 @@
   - 或用 ImageMagick：`magick seedling.svg -define icon:auto-resize=64,128,256 seedling.ico`
   - 完成后放置到 `img/seedling.ico`，重新执行 `cargo build --release`。
 
-![Logo](.\seedling-md\assets\seedling.png)
+![Logo](./seedling-md/assets/seedling.png)
