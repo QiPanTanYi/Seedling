@@ -33,13 +33,8 @@
 
 - 目前只有windows版本，若需要可以自行手动进行编译打包。
 - 将 `seedling-md.exe` 放入需要处理的 Markdown 目录后运行，即可批量更新首尾统计。
+- 不会对子文件夹造成影响，只会写入该exe存在的同级文件夹下的所有md文档。
 
-**设置 EXE 图标（Windows）**
-- Windows 可执行文件图标需使用 `.ico` 格式，不能直接使用 `.svg`。
-- 项目已加入图标嵌入流程（`build.rs` + `winres`）；当存在 `img/seedling.ico` 时，打包将自动嵌入图标。
-- 将 `img/seedling.svg` 转换为 `img/seedling.ico` 的简便方法：
-  - 使用 Inkscape 或任意在线转换工具，导出包含多尺寸的 ICO（建议 16/32/48/64/128/256）。
-  - 或用 ImageMagick：`magick seedling.svg -define icon:auto-resize=64,128,256 seedling.ico`
-  - 完成后放置到 `img/seedling.ico`，重新执行 `cargo build --release`。
+
 
 ![Logo](./seedling-md/assets/seedling.png)
